@@ -49,7 +49,8 @@ public class BetSlipPage extends BasicPage {
 
 
         String stake_in_betslip = driver.findElement(stake_selector).getAttribute("data-ng-init");
-        sleep(300, TimeUnit.MILLISECONDS);
+        //Nasty sleep for mobile devices, need to recalculate
+        sleep(1, TimeUnit.SECONDS);
         //Need to compare double values instead of String equalsTo, because on mobile device. This stake field automaticaly add 0 on end If it is only one digit after dot.
         Assert.assertEquals(stake, Double.parseDouble(stake_in_betslip),0);
 
