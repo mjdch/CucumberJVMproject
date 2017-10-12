@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class BasicPage {
@@ -119,5 +120,22 @@ public class BasicPage {
         return false;
     }
 
+
+    /**
+     * Thread sleep according to value and TimeUnit passed as parameter
+     *
+     * @param value    Value of TimeUnit
+     * @param timeunit TimeUnit
+     */
+    protected void sleep(int value, TimeUnit timeunit) {
+
+        long time = timeunit.toMillis(value);
+
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

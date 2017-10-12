@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class BetSlipPage extends BasicPage {
 
@@ -48,7 +49,7 @@ public class BetSlipPage extends BasicPage {
 
 
         String stake_in_betslip = driver.findElement(stake_selector).getAttribute("data-ng-init");
-
+        sleep(300, TimeUnit.MILLISECONDS);
         //Need to compare double values instead of String equalsTo, because on mobile device. This stake field automaticaly add 0 on end If it is only one digit after dot.
         Assert.assertEquals(stake, Double.parseDouble(stake_in_betslip),0);
 
