@@ -16,7 +16,7 @@ public class WebdriverSetup {
     private static void setUpWebDriverVariablesBasedOnOS() {
         if (SystemUtils.IS_OS_LINUX || SystemUtils.IS_OS_MAC) {
             File f = new File("WebDriver/Linux/chromedriver");
-            System.setProperty("webdriver.chromne.driver", f.getAbsolutePath());
+            System.setProperty("webdriver.chrome.driver", f.getAbsolutePath());
         }
         if (SystemUtils.IS_OS_WINDOWS) {
             File f = new File("WebDriver/Windows/chromedriver.exe");
