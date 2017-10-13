@@ -4,7 +4,7 @@ Repository created for Interview Test purpose.
 
 # Execution
 ### Precodnitions
-Test framework was tested and works on Windows and Linux 64 bit environment (chromedriver itself is provided in repository). Also these preconditions:
+Test framework was tested and works on Windows, Linux 64 bit and MacOS environment (chromedriver for each OS is provided in repository). Also these preconditions:
   - **JDK** installed and configured 
   - **Google Chrome** The newest version installed on system in default directory
   - **Maven** added to PATH system variable (or use it from directory)

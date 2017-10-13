@@ -69,7 +69,7 @@ public class HomePage extends BasicPage {
     }
 
     /**
-     * Method for clicking Random Premier League Event from 12 Most popular one, in fact It could be moved to other class
+     * Method for clicking Random Premier League Event from 10 Most popular one, in fact It could be moved to other class
      * reflecting Football Competition League page but I Put it in this class for simplicity.
      * Assertions If correct event is opened by checking event name on link from list and on Event Page
      */
@@ -77,7 +77,7 @@ public class HomePage extends BasicPage {
     public FootballEventPage clickOnRandomPremierLeagueEvent(){
         List<WebElement> events = getClickableElements(premier_league_events);
         Random r = new Random();
-        WebElement event = events.get(r.nextInt(events.size()));
+        WebElement event = events.get(r.nextInt(10));
 
         //Regex for two representation of Event Name, Desktop & Mobile
         String[] event_teams = event.getText().split(" v |\\n");
